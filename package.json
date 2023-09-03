@@ -1,0 +1,28 @@
+{
+  "name": "todo-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development tsx src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^3.12.8",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "inquirer": "^9.2.10",
+    "mongoose": "^7.5.0",
+    "nanoid": "^4.0.2",
+    "ora": "^7.0.1"
+  }
+}

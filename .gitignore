@@ -1,0 +1,21 @@
+#Files
+.env
+
+
+
+#Directories
+/node_modules
+/dist
+/**/uploads
+/src/logs
+/.vscode
+/.idea
+# Project exclude paths
+/src/commands/AddTask.js
+/src/commands/DeleteTask.js
+/src/commands/ReadTask.js
+/src/commands/UpdateTask.js
+/src/constants/EnvVars.js
+/src/db/connect-db.js
+/src/schema/TodoSchema.js
+/src/index.js
