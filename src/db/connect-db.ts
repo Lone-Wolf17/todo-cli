@@ -1,10 +1,10 @@
 import mongoose from  'mongoose';
 import ora from  'ora';
 import chalk from 'chalk';
-import EnvVars from "../constants/EnvVars";
+import EnvVars from "../constants/EnvVars.js";
 
 
-export const  connectDB = async () => {
+export const connectDB = async () => {
     try {
         const spinner = ora('Connecting to the database...').start();
         await mongoose.connect(EnvVars.MONGO_URI);

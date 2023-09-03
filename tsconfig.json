@@ -6,6 +6,8 @@
     "module": "ESNext",                                /* Specify what module code is generated. */
     "isolatedModules": true,
     "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     /* Emit */
     "outDir": "./dist" /* Specify an output folder for all emitted files. */,
     /* Interop Constraints */
@@ -14,6 +16,9 @@
     /* Type Checking */
     "strict": true,                                      /* Enable all strict type-checking options. */
     /* Completeness */
-    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+  },
+  "ts-node": {
+    "esm": true
   }
 }
