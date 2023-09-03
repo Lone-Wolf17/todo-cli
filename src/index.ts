@@ -11,7 +11,7 @@ import deleteTask from "./commands/DeleteTask.js";
 const program = new Command();
 
 // set up the name and description of the CLI tool
-program.name('todo').description('Your terminal task manager!!').version('1.0.1');
+program.name('todo').description('Your terminal task manager!!').version('1.0.0');
 
 // Define a command called 'add'
 program.command('add').description('Create a new Todo.').action(addTask);

@@ -5,7 +5,8 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "dev": "NODE_ENV=development nodemon --exec ts-node --pretty src/index.ts"
+    "dev": "NODE_ENV=development nodemon --exec ts-node --pretty src/index.ts",
+    "install-bin": "tsc && npm i -g"
   },
   "keywords": [],
   "author": "",
