@@ -2,9 +2,10 @@ import {prop, getModelForClass, pre} from '@typegoose/typegoose';
 import {Status} from "../constants/enums.js";
 import {TimeStamps} from "@typegoose/typegoose/lib/defaultClasses.js";
 import {nanoid} from  'nanoid';
-// @pre<Todo>('save', function() {
-//     this.code = nanoid(10);
-// })
+
+@pre<TodoClass>('save', function() {
+    this.code = nanoid(10);
+})
 export class TodoClass extends TimeStamps {
     @prop({required: true, trim: true})
     public name!: string;
@@ -17,7 +18,7 @@ export class TodoClass extends TimeStamps {
         required: true, trim: true, default: Status.Pending})
     public status!: Status;
 
-    @prop({required: true, trim: true, default: nanoid(10)})
+    @prop({required: true, trim: true, default: 'default-code'})
     public code!: string;
 
 }
