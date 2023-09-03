@@ -52,19 +52,6 @@ export default  async function updateTask() {
             // Get the user's response of the updated data by calling [askUpdatedQuestion] method
             const update = await  askUpdateQuestion(todo);
 
-            // If user marked status as completed, we delete the todo else we update the data
-            if (update.status == Status.Completed) {
-                // change the spinner text and start it again
-                spinner.text = 'Deleting the todo';
-                spinner.start();
-
-                // delete the todo
-                await  TodoModel.deleteOne({_id: todo._id});
-
-                // stop spinner and display the success message
-                spinner.stop()
-                console.log(chalk.greenBright('Deleted the todo.'))
-            } else {
                 // Update the todo
                 spinner.text = 'Updating to the todo';
                 spinner.start();
@@ -72,7 +59,6 @@ export default  async function updateTask() {
                 await  TodoModel.updateOne({_id: todo._id}, update, {runValidators: true});
                 spinner.stop();
                 console.log(chalk.greenBright('Updated the todo.'))
-            }
         }
 
         // Disconnect from DB
