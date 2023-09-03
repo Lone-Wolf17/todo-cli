@@ -10,7 +10,7 @@ class Todo extends TimeStamps {
     public name!: string;
 
     @prop({required: true, trim: true})
-    public jobs!: string;
+    public detail!: string;
 
     @prop({
         enum: Status,
