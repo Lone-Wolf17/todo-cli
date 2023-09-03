@@ -1,10 +1,11 @@
-import {connectDB, disconnectDB} from '../db/connect-db.js'
 import inquirer from 'inquirer'
-import TodoModel, {TodoClass} from '../models/Todo.model.js'
 import ora from 'ora';
 import chalk from 'chalk';
+
+import TodoModel, {TodoClass} from '../models/Todo.model.js'
+import {connectDB, disconnectDB} from '../db/connect-db.js'
 import {Status} from "../constants/enums.js";
-import {getTaskCode} from "./utils";
+import {getTaskCode} from "./utils.js";
 
 const askUpdateQuestion = async (todo: TodoClass) => {
     try {

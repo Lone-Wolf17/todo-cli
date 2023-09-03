@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon --exec ts-node --pretty src/index.ts"
   },
@@ -28,5 +28,8 @@
     "mongoose": "^7.5.0",
     "nanoid": "^4.0.2",
     "ora": "^7.0.1"
+  },
+  "bin": {
+    "todo": "./dist/index.js"
   }
 }

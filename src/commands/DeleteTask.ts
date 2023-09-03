@@ -1,9 +1,9 @@
 import ora from 'ora';
 import chalk from 'chalk';
 
-import {connectDB, disconnectDB} from "../db/connect-db";
-import {TodoModel} from "../models/Todo.model";
-import {getTaskCode} from "./utils";
+import {connectDB, disconnectDB} from "../db/connect-db.js";
+import {TodoModel} from "../models/Todo.model.js";
+import {getTaskCode} from "./utils.js";
 
 export default  async  function deleteTask() {
     try {
