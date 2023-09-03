@@ -10,13 +10,17 @@ import {getTaskCode} from "./utils.js";
 const askUpdateQuestion = async (todo: TodoClass) => {
     try {
         // prompt the user to update the todo data
-        const update = await inquirer.prompt([
+        return await inquirer.prompt([
             {name: 'name', message: 'Update the name?', type: 'input', default: todo.name},
             {name: 'detail', message: 'Update the Description?', type: 'input', default: todo.detail},
-            {name: 'status', message: 'Update the status?', type: 'list', choices: Object.values(Status), default: todo.status}
+            {
+                name: 'status',
+                message: 'Update the status?',
+                type: 'list',
+                choices: Object.values(Status),
+                default: todo.status
+            }
         ]);
-
-        return update;
     } catch (err) {
         console.log('Something went wrong... \n', err);
     }

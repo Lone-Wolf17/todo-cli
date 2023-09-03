@@ -30,7 +30,7 @@ export  default  async function readTask () {
                 )
             })
         }
-
+        console.log(chalk.magentaBright('Count: '), todos.length);
         // disconnect from the database
         await  disconnectDB();
     } catch (error) {

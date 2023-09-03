@@ -8,12 +8,10 @@ import {TodoModel} from "../models/Todo.model.js";
 
 /** uses inquirer to ask the user for the task's name and details. The answers are then returned as an object. */
 const  input = async () => {
-    const answers = await inquirer.prompt([
+    return await inquirer.prompt([
         {name: 'name', message: 'Enter the name of the task: ', type: 'input'},
         {name: 'detail', message: 'Enter the details of the task: ', type: 'input'}
     ]);
-
-    return answers;
 }
 
  const askQuestions = async  () => {
