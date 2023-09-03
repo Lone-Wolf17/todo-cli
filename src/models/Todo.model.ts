@@ -5,7 +5,7 @@ import {nanoid} from  'nanoid';
 // @pre<Todo>('save', function() {
 //     this.code = nanoid(10);
 // })
-class Todo extends TimeStamps {
+export class TodoClass extends TimeStamps {
     @prop({required: true, trim: true})
     public name!: string;
 
@@ -22,4 +22,6 @@ class Todo extends TimeStamps {
 
 }
 
-export const TodoModel = getModelForClass(Todo); // UserModel is a regular Mongoose Model with correct types
+export const TodoModel = getModelForClass(TodoClass); // UserModel is a regular Mongoose Model with correct types
+
+export default TodoModel
