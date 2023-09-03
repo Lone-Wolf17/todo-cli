@@ -1,8 +1,10 @@
 import inquirer from 'inquirer';
-import {connectDB, disconnectDB} from "../db/connect-db";
-import {TodoModel} from "../models/Todo.model";
 import ora from 'ora';
 import chalk from 'chalk';
+
+import {connectDB, disconnectDB} from "../db/connect-db";
+import {TodoModel} from "../models/Todo.model";
+
 
 /** uses inquirer to ask the user for the task's name and details. The answers are then returned as an object. */
 const  input = async () => {
