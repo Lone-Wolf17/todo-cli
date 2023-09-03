@@ -55,7 +55,8 @@ export  default  async function readTask () {
                 console.log(
                     chalk.cyanBright('Todo Code: ') + todo.code + '\n',
                     chalk.blueBright('Name: ') + todo.name + '\n',
-                    chalk.yellowBright('Description: ') + todo.detail + '\n'
+                    chalk.yellowBright('Description: ') + todo.detail + '\n',
+                    chalk.blue('Status: ') + todo.status + '\n'
                 )
             })
         }
